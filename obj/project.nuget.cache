@@ -1,16 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "MldGj9pfLgX18WKfXy1/GKGdXntjLGjyVjQ5SSIr5lSR3e4Y6v5GIMjAu45Bfx52VBEh8/rqT3GW/yFe0OEi/Q==",
+  "dgSpecHash": "pzLYb7Bu4XFOzRdkipwHwPeJ7JvzQI+zdNkdgmN6qdtCgULUkUwm864sRzBL5tdCyhWaOFAT3phy21AVnL+8xw==",
   "success": true,
   "projectFilePath": "/home/innowave/Haroon/Personal/PaymentAPI/PaymentAPI.csproj",
   "expectedPackageFiles": [
     "/home/innowave/.nuget/packages/microsoft.aspnetcore.openapi/8.0.15/microsoft.aspnetcore.openapi.8.0.15.nupkg.sha512",
     "/home/innowave/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/home/innowave/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
+    "/home/innowave/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/innowave/.nuget/packages/portable.bouncycastle/1.9.0/portable.bouncycastle.1.9.0.nupkg.sha512",
+    "/home/innowave/.nuget/packages/razorpay/3.1.4/razorpay.3.1.4.nupkg.sha512",
     "/home/innowave/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "/home/innowave/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "/home/innowave/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "/home/innowave/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Razorpay 3.1.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Razorpay",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
