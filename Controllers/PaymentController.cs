@@ -10,26 +10,28 @@ namespace PaymebtAPI.Controllers
     [Route("api/payment")]
     public class PaymentController : ControllerBase
     {
+
         [HttpPost("create-order")]
         public IActionResult CreateOrder([FromBody] UPIPaymentRequest request)
         {
+
+            Console.WriteLine("end point called");
             Dictionary<string, object> input = new Dictionary<string, object>();
             input.Add("amount", request.Amount * 100);
             input.Add("currency", "INR");
             input.Add("receipt", "12121");
 
-            string key = "";
-            string secret = "";
+            string key = "rzp_test_gCwU8DoXGtNICx";
+            string secret = "QisqqM9TwNdRM0hcob82rQFy";
 
             RazorpayClient client = new RazorpayClient(key, secret);
 
-            Razorpay.Api.Order order = client.Order.Create(input);
+            Order order = client.Order.Create(input);
             string orderId = order["id"].ToString();
-            return Ok(orderId);
+            Console.WriteLine($"{orderId} order retruning");
+            return Ok(order);
         }
 
-      
-     
     }
 
 
