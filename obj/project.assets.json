@@ -577,6 +577,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.15",
+      "Newtonsoft.Json >= 13.0.3",
       "Razorpay >= 3.1.4",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
@@ -587,11 +588,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/innowave/Haroon/Personal/PaymentAPI/PaymentAPI.csproj",
+      "projectUniqueName": "/home/innowave/Haroon/DotnetPractice/PaymentAPI/PaymentAPI.csproj",
       "projectName": "PaymentAPI",
-      "projectPath": "/home/innowave/Haroon/Personal/PaymentAPI/PaymentAPI.csproj",
+      "projectPath": "/home/innowave/Haroon/DotnetPractice/PaymentAPI/PaymentAPI.csproj",
       "packagesPath": "/home/innowave/.nuget/packages/",
-      "outputPath": "/home/innowave/Haroon/Personal/PaymentAPI/obj/",
+      "outputPath": "/home/innowave/Haroon/DotnetPractice/PaymentAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/innowave/.nuget/NuGet/NuGet.Config"
@@ -621,6 +622,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[8.0.15, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Razorpay": {
             "target": "Package",

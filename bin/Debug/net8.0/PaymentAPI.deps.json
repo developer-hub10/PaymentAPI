@@ -9,6 +9,7 @@
       "PaymentAPI/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "8.0.15",
+          "Newtonsoft.Json": "13.0.3",
           "Razorpay": "3.1.4",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
