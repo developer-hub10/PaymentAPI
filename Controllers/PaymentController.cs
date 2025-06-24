@@ -20,7 +20,7 @@ namespace PaymebtAPI.Controllers
             _logger = logger;
         }
 
-       
+
 
         [HttpPost("create-order")]
         public IActionResult CreateOrder([FromBody] UPIPaymentRequest request)
@@ -41,6 +41,7 @@ namespace PaymebtAPI.Controllers
                 input.Add("amount", request.Amount);
                 input.Add("currency", "INR");
                 input.Add("receipt", "order_rcptid_" + Guid.NewGuid().ToString("N").Substring(0, 8));
+                input.Add("payment_capture", 1);
 
 
 
@@ -53,7 +54,8 @@ namespace PaymebtAPI.Controllers
                 var orderId = order["id"].ToString();
 
                 _logger.LogInformation($"Creating Razorpay order for amount: {request.Amount} with Order Id {orderId}"); ;
-                return Ok(order);
+                 return Ok(new { orderId = orderId });
+
             }
             catch (Exception ex)
             {
@@ -66,7 +68,7 @@ namespace PaymebtAPI.Controllers
         [HttpPost("webhook")]
         public async Task<IActionResult> RazorpayWebhook()
         {
-              _logger.LogWarning("Webhook Method called.");
+            _logger.LogWarning("Webhook Method called.");
             string body;
             using (var reader = new StreamReader(Request.Body))
             {
@@ -91,13 +93,23 @@ namespace PaymebtAPI.Controllers
             switch (webhook?.Event)
             {
                 case "payment.captured":
+                  Console.WriteLine(webhook.Payload);
                     _logger.LogInformation("Payment Captured: {Payload}", JsonConvert.SerializeObject(webhook.Payload));
                     // TODO: update database, send email, etc.
                     break;
 
                 case "payment.failed":
+                  Console.WriteLine(webhook.Payload);
                     _logger.LogError("Payment Failed: {Payload}", JsonConvert.SerializeObject(webhook.Payload));
                     // TODO: mark as failed in DB or notify user
+                    break;
+                case "payment.authorized":
+                    _logger.LogInformation("Payment authorized: {Payload}", JsonConvert.SerializeObject(webhook.Payload));
+                    Console.WriteLine(webhook.Payload);
+                    break;
+                case "order.paid":
+                    _logger.LogInformation("Order Paid: {Payload}", JsonConvert.SerializeObject(webhook.Payload));
+                    Console.WriteLine(webhook.Payload);
                     break;
 
                 default:
