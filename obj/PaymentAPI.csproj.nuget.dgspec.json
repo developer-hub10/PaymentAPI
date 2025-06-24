@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/innowave/Haroon/DotnetPractice/PaymentAPI/PaymentAPI.csproj": {}
+    "/home/innowave/Projects/Haroon/MyProjects/PaymentAPI/PaymentAPI.csproj": {}
   },
   "projects": {
-    "/home/innowave/Haroon/DotnetPractice/PaymentAPI/PaymentAPI.csproj": {
+    "/home/innowave/Projects/Haroon/MyProjects/PaymentAPI/PaymentAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/innowave/Haroon/DotnetPractice/PaymentAPI/PaymentAPI.csproj",
+        "projectUniqueName": "/home/innowave/Projects/Haroon/MyProjects/PaymentAPI/PaymentAPI.csproj",
         "projectName": "PaymentAPI",
-        "projectPath": "/home/innowave/Haroon/DotnetPractice/PaymentAPI/PaymentAPI.csproj",
+        "projectPath": "/home/innowave/Projects/Haroon/MyProjects/PaymentAPI/PaymentAPI.csproj",
         "packagesPath": "/home/innowave/.nuget/packages/",
-        "outputPath": "/home/innowave/Haroon/DotnetPractice/PaymentAPI/obj/",
+        "outputPath": "/home/innowave/Projects/Haroon/MyProjects/PaymentAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/innowave/.nuget/NuGet/NuGet.Config"

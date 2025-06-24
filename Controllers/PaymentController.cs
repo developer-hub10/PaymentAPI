@@ -66,6 +66,7 @@ namespace PaymebtAPI.Controllers
         [HttpPost("webhook")]
         public async Task<IActionResult> RazorpayWebhook()
         {
+              _logger.LogWarning("Webhook Method called.");
             string body;
             using (var reader = new StreamReader(Request.Body))
             {
