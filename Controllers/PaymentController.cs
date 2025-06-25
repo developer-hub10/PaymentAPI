@@ -10,9 +10,6 @@ using PaymentAPI.interfaces;
 namespace PaymebtAPI.Controllers
 {
 
-
-
-
     [ApiController]
     [Route("api/payment")]
     public class PaymentController : ControllerBase

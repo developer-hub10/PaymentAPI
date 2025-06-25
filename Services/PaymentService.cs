@@ -6,7 +6,6 @@ using Razorpay.Api;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using Dapper;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 
 
