@@ -1,3 +1,5 @@
+using PaymentAPI.interfaces;
+using PaymentAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 
 builder.Services.AddCors(options =>
 {
