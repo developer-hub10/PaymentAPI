@@ -78,7 +78,7 @@ namespace PaymentAPI.Services
                     var paymentDetail = new
                     {
                         payment_id = (string)entity["id"],
-                        amount = (double)entity["amount"],
+                        amount = (double)entity["amount"] / 100,
                         currency = (string)entity["currency"],
                         payment_status = ((string)entity["status"] == "captured") ? "success" : "failed",
                         payment_method = (string)entity["method"],
