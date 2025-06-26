@@ -15,6 +15,16 @@ namespace PaymentAPI.Services
 
     public class PaymentService : IPaymentService
     {
+
+
+        private static IConfiguration _config;
+
+
+        public PaymentService(IConfiguration config)
+        {
+            _config = config;
+        }
+
         public string CreateOrder(PaymentRequest request)
         {
             try
@@ -27,8 +37,8 @@ namespace PaymentAPI.Services
                 input.Add("receipt", "order_rcptid_" + Guid.NewGuid().ToString("N").Substring(0, 8));
 
 
-                string key = "rzp_test_gCwU8DoXGtNICx";
-                string secret = "QisqqM9TwNdRM0hcob82rQFy";
+                string key = _config.GetValue<string>("RazorpayConfigs:Key");
+                string secret = _config.GetValue<string>("RazorpayConfigs:Secret");
 
                 var client = new RazorpayClient(key, secret);
                 var order = client.Order.Create(input);
